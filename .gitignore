@@ -204,3 +204,15 @@ sftp-config.json
 # Vagrant
 .vagrant/
 ubuntu-xenial-16.04-cloudimg-console.log
+
+# Archivos y directorios de caché de clj-kondo
+.clj-kondo/
+
+# Archivos de salida de Calva
+.calva/output-window/
+
+
+# Otros archivos y directorios temporales
+*.log
+*.tmp
+*.bak
