@@ -1,0 +1,102 @@
+; This is the Calva REPL Window.
+; It's just a file, really, with some special treatment from Calva.
+; Use it as a REPL input prompt if you like. (When the REPL is connected.)
+; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
+; Please see https://calva.io/repl-window/ for more info.
+; Happy coding! ♥️
+
+; TIPS: As with any Clojure file when the REPL is connected:
+; - `alt+enter` evaluates the current top level form.
+; - `ctrl+enter` evaluates the current form.
+; Special for this file:
+; - `alt+up` and `alt+down` traverse up and down the REPL command history
+;    when the cursor is after the last contents at the prompt
+; 
+; See also the Calva Inspector: https://calva.io/inspector/
+
+PLEASE NOTE
+We will update the default location of this file.
+The new default location will be
+  "<projectRootPath>/.calva/repl.calva-repl"
+For now the legacy path is used by default.
+To give yourself a smooth transition, you can opt in
+to the change, by configuring this setting as false:
+  "calva.useLegacyReplWindowPath"
+and then add "**/.calva/repl.calva-repl" to your ".gitignore" file.
+
+
+This file is configured as the output destination for all REPL output.
+You can configure this with the setting:
+  "calva.outputDestinations"
+
+
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: (cd /Users/hackemate/Developer/clojure/clojure-koans; lein update-in :dependencies conj '[nrepl,"1.1.1"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.47.1"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless)
+; Using host:port 127.0.0.1:49863 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉koan-engine.runner꞉> 
+"Please see https://calva.io/output/#about-stdout-in-the-repl-window
+about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉koan-engine.runner꞉> 
+; Jack-in done.
+clj꞉koan-engine.runner꞉> 
+true
+clj꞉koans.01-equalities꞉> 
+false
+clj꞉koans.01-equalities꞉> 
+hello
+clj꞉koans.01-equalities꞉> 
+true
+clj꞉koans.01-equalities꞉> 
+false
+clj꞉koans.01-equalities꞉> 
+; Syntax error reading source at (REPL:25:1).
+; EOF while reading, starting at line 24
+clj꞉koans.01-equalities꞉> 
+true
+clj꞉koans.01-equalities꞉> 
+false
+clj꞉koans.01-equalities꞉> 
+true
+clj꞉koans.01-equalities꞉> 
+true
+clj꞉koans.01-equalities꞉> 
+hello
+clj꞉koans.01-equalities꞉> 
+:hello
+clj꞉koans.01-equalities꞉> 
+true
+clj꞉koans.01-equalities꞉> 
+:fill-in-the-blank
+clj꞉koans.01-equalities꞉> 
+nil
+clj꞉koans.01-equalities꞉> 
+true
+clj꞉koans.01-equalities꞉> 
+true
+clj꞉koans.02-strings꞉>
+(get "Characters")
+; Execution error (ArityException) at koans.02-strings/eval11004 (form-init5661367051386942353.clj:86).
+; Wrong number of args (1) passed to: clojure.core/get
+clj꞉koans.02-strings꞉> 
+; Execution error (ArityException) at koans.02-strings/eval11007 (form-init5661367051386942353.clj:86).
+; Wrong number of args (1) passed to: clojure.core/get
+clj꞉koans.02-strings꞉> 
+(\C (get "Characters"))
+; Execution error (ClassCastException) at koans.02-strings/eval11010 (form-init5661367051386942353.clj:93).
+; class java.lang.Character cannot be cast to class clojure.lang.IFn (java.lang.Character is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉koans.02-strings꞉> 
+11
+clj꞉koans.02-strings꞉> 
+false
+clj꞉koans.02-strings꞉> 
+"123"
+clj꞉koans.02-strings꞉> 

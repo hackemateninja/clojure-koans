@@ -1,31 +1,31 @@
 (ns koans.02-strings
-  (:require [koan-engine.core :refer :all]
-            [clojure.string :as string]))
+  (:require [clojure.string :as string]
+            [koan-engine.core :refer :all]))
 
 (meditations
   "A string is nothing more than text surrounded by double quotes"
-  (= __ "hello")
+  (= "hello" "hello")
 
   "But double quotes are just magic on top of something deeper"
-  (= __ (str 'world))
+  (= "world" (str 'world))
 
   "You can do more than create strings, you can put them together"
-  (= "Cool right?" (str __ __))
+  (= "Cool right?" (str "Cool " "right?"))
 
   "You can even get certain characters"
-  (= \C (get "Characters" __))
+  (= \C (get "Characters" 0))
 
   "Or even count the characters"
-  (= __ (count "Hello World"))
+  (= 11 (count "Hello World"))
 
   "But strings and characters are not the same"
-  (= __ (= \c "c"))
+  (= false (= \c "c"))
 
   "What if you only wanted to get part of a string?"
-  (= "World" (subs "Hello World" __ __))
+  (= "World" (subs "Hello World" 6 11))
 
   "How about joining together elements in a list?"
-  (= __ (string/join '(1 2 3)))
+  (= "123" (string/join '(1 2 3)))
 
   "What if you wanted to separate them out?"
   (= "1, 2, 3" (string/join __ '(1 2 3)))
